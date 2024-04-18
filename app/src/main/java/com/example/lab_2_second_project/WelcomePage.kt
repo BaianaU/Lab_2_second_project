@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -39,10 +40,12 @@ fun WelcomePage(navController: NavHostController){
         modifier = Modifier
             .fillMaxSize()
             .background(brush = gradient)
+            .padding(horizontal = 14.dp)
     ) {
+        Spacer(modifier = Modifier.height(25.dp))
         Image(painter = painterResource(id = R.drawable.main),contentDescription = "WelcomePage")
 
-        Spacer(modifier = Modifier.height(5.dp))
+        Spacer(modifier = Modifier.height(15.dp))
 
         Text(
             text = "Welcome to Your Ultimate Space Organization Solution!" +

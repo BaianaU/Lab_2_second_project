@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -42,6 +43,7 @@ fun SignUp(navController: NavController){
             .fillMaxSize()
             .background(brush = gradient)
     ){
+        Spacer(modifier = Modifier.height(25.dp))
         Image(painter = painterResource(id = R.drawable.shelf), contentDescription = "SingUp")
 
         Spacer(modifier = Modifier.height(20.dp))
@@ -73,7 +75,7 @@ fun SignUp(navController: NavController){
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(
-            onClick = { navController.navigate(Routes.Screen.SignUp.route) },
+            onClick = { navController.navigate(Routes.Screen.Login.route) },
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color.Black,
                 contentColor = Color.White

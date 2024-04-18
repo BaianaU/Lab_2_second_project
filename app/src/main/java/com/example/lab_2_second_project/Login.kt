@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -42,6 +43,7 @@ fun Login(navController: NavController) {
             .fillMaxSize()
             .background(brush = gradient)
     ) {
+        Spacer(modifier = Modifier.height(25.dp))
         Image(
             painter = painterResource(id = R.drawable.shelf),
             contentDescription = "Login"
@@ -92,10 +94,10 @@ fun Login(navController: NavController) {
                 }
             },
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Black,  // Цвет фона кнопки
-                contentColor = Color.White   // Цвет текста на кнопке
+                containerColor = Color.Black,
+                contentColor = Color.White
             ),
-            shape = RoundedCornerShape(10.dp)  // Форма кнопки с закругленными углами
+            shape = RoundedCornerShape(10.dp)
         ) {
             Text(text = "Log In")
         }
